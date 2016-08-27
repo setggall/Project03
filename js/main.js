@@ -14,7 +14,7 @@ $(document).ready(function() {
 });
 
 //This function will check to see the value selected from the drop down and show and hide the text box accordingly.
-$('#title').click(function() {
+$('#title').change(function() {
     if ($('#title').val() === 'other') {
         $('#other-title').show();
     } else {
@@ -23,7 +23,7 @@ $('#title').click(function() {
 });
 
 //This disugustingly ugly function shows and hides shirt color based on the design selected.
-$('#design').click(function() {
+$('#design').change(function() {
     var availableColor = $('#color').children();
     if ($('#design').val() === 'js puns') {
         $(availableColor).eq(5).hide();
@@ -129,7 +129,7 @@ npm.click(function() {
 //THAT'S A LOT OF FUNCTIONS!
 
 //Shows and hides payment details based on the selected form of payment.
-$('#payment').click(function() {
+$('#payment').change(function() {
     if ($('#payment').val() === 'credit card') {
         $('#credit-card').show();
         $('#paypal').hide();
